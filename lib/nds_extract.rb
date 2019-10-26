@@ -25,8 +25,7 @@ def gross_for_director(d)
 end
 
 def list_of_directors(source)
-source.map |director_data|
-director_data[:name]
+source.map |director_data| director_data[:name]
 end
 
 def total_gross(source)
