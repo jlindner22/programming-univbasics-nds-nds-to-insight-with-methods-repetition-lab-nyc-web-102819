@@ -29,7 +29,7 @@ source.map{|director_data| director_data[:name]}
 end
 
 def total_gross(source)
-source.reduce{|director_data|  }
+source.reduce(0){|director_data|  }
 
 
 # 1. directors_totals: returns a Hash of { dir_name => gross }
