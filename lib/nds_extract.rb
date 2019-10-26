@@ -29,8 +29,9 @@ source.map{|director_data| director_data[:name]}
 end
 
 def total_gross(source)
-source.reduce(0){|director_data|  }
-
+ totals = directors_totals(source)
+list_of_directors(source).reduce(0){|grand_total, director|
+grand_total + totals[director]}
 
 # 1. directors_totals: returns a Hash of { dir_name => gross }
   # 2. list_of_directors: names provides an Array of directors names (use
@@ -39,7 +40,6 @@ source.reduce(0){|director_data|  }
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
   
-  total
 end
 
 
